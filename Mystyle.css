@@ -1,0 +1,119 @@
+body {
+    min-height: 100vh;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    position: relative;
+    top: 5vw;
+    left: 5vw;
+    overflow: hidden;
+    margin: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: box-shadow 0.6s;
+    display: inline-block;
+}
+
+.card_poster {
+    width: 100%;
+    height: 100%;    
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.6s;
+    z-index: 6;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.img_bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.4) 2%, rgba(255,255,255,0.11248249299719892) 50%);
+}
+
+.card_save {
+    background-color: red;
+    position: absolute;
+    right: 20px;
+    top: -55px;
+    border-radius: 50px;
+    padding: 15px;
+    transition: top 0.7s;
+    z-index: 8;
+}
+
+.card_buttons {
+    position: absolute;
+    bottom: -55px;
+    left: 20px;
+    right: 20px;
+    opacity: 0.7;
+    font-weight: bold;
+    transition: bottom 0.7s;
+    z-index: 8;
+}
+
+.card_share {
+    border: 1px solid white;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card_upload {
+    border: 1px solid white;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    width: 30px;
+    position: absolute;
+}
+
+.card_buttons div {
+    background-color: white;
+    display: inline-block;
+    border-radius: 20px;
+    margin-right: 10px;
+    color: black;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+#menu {
+    right: 0;
+}
+
+#upload {
+    right: 60px;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 15px black;
+}
+
+.card:hover .card_save {
+    right: 20px;
+    top: 20px;
+}
+
+.card:hover .card_buttons {
+    bottom: 20px;
+}
+
+.card:hover .card_poster {
+    background-color: rgba(0, 0, 0, 0.212);
+}
